@@ -1,0 +1,171 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LifeVibe — Inspiring Everyday Living</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="nav-left">
+        <a href="#home" class="logo">LifeVibe</a>
+      </div>
+
+      <div class="nav-center">
+        <label for="searchInput" class="visually-hidden">Search posts</label>
+        <input id="searchInput" class="search" type="search" placeholder="Search lifestyle tips…" aria-label="Search lifestyle tips">
+      </div>
+
+      <div class="nav-right">
+        <nav class="filters" role="toolbar" aria-label="Category filters">
+          <button class="filter-btn active" data-cat="All">All</button>
+          <button class="filter-btn" data-cat="Health">Health</button>
+          <button class="filter-btn" data-cat="Fitness">Fitness</button>
+          <button class="filter-btn" data-cat="Fashion">Fashion</button>
+          <button class="filter-btn" data-cat="Home">Home</button>
+          <button class="filter-btn" data-cat="Travel">Travel</button>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero" role="banner" aria-label="Hero section">
+      <div class="hero-panel">
+        <h1 class="hero-title">LifeVibe</h1>
+        <p class="hero-tagline">Inspiring Everyday Living</p>
+        <button id="discoverBtn" class="btn btn-primary">Discover More</button>
+      </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section id="blog" class="section posts-section" aria-labelledby="latest-posts">
+      <div class="wrap">
+        <h2 id="latest-posts" class="section-title">Latest Lifestyle Posts</h2>
+
+        <div id="grid" class="grid" aria-live="polite">
+          <!-- Card 1 -->
+          <article class="card" data-cat="Health">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80" alt="Meditation practice">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Health</span>
+              <h3>Mindful Morning Rituals</h3>
+              <p>Start your day grounded: short breathing exercises, light stretching, and a simple mindful routine to bring clarity.</p>
+              <div class="card-actions">
+                <button class="read-btn" data-title="Mindful Morning Rituals" data-img="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80" data-content="<p>Daily mindful rituals help reduce stress and increase focus. Try 10 minutes of breathing, then gentle movement. Over time this creates a calmer baseline for your day.</p><p>Simple practices like journaling one gratitude item and setting a single priority can transform productivity and wellbeing.</p>">Read More</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" data-cat="Fitness">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1200&q=80" alt="Home workout">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Fitness</span>
+              <h3>10-Minute Full Body Routine</h3>
+              <p>No equipment? No problem. This short routine wakes your body up and fits into the busiest mornings.</p>
+              <div class="card-actions">
+                <button class="read-btn" data-title="10-Minute Full Body Routine" data-img="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1600&q=80" data-content="<p>Combine squats, push-ups, lunges, plank and jumping jacks in intervals. 30 seconds work / 15 seconds rest for 3 rounds provides strength and cardio benefits.</p><p>Focus on form and breathe intentionally — quality beats quantity. Repeat 3–5 times per week to build consistency.</p>">Read More</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" data-cat="Fashion">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1200&q=80" alt="Minimalist wardrobe">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Fashion</span>
+              <h3>Minimalist Wardrobe Essentials</h3>
+              <p>Curate a capsule wardrobe: neutral staples, quality fabrics, and pieces that mix effortlessly.</p>
+              <div class="card-actions">
+                <button class="read-btn" data-title="Minimalist Wardrobe Essentials" data-img="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&q=80" data-content="<p>Choose timeless silhouettes and invest in good tailoring. A capsule wardrobe reduces decision fatigue and makes getting dressed a pleasure.</p><p>Focus on a cohesive color palette and versatile layers to extend options across seasons.</p>">Read More</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card" data-cat="Home">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80" alt="Cozy interior">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Home</span>
+              <h3>Cozy Home Décor Tips</h3>
+              <p>Small changes — layered lighting, soft textiles, and plants — make a big impact on comfort and mood.</p>
+              <div class="card-actions">
+                <button class="read-btn" data-title="Cozy Home Décor Tips" data-img="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80" data-content="<p>Introduce warm textures and adjustable lighting. A few throw pillows and a rug can define spaces and add comfort.</p><p>Bring plants into corners to freshen air and visually soften hard edges. Small updates often feel luxurious without a large budget.</p>">Read More</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card" data-cat="Travel">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Seaside travel">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Travel</span>
+              <h3>Hidden Travel Gems to Visit</h3>
+              <p>Explore lesser-known destinations for authentic experiences, fewer crowds, and unforgettable memories.</p>
+              <div class="card-actions">
+                <button class="read-btn" data-title="Hidden Travel Gems to Visit" data-img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80" data-content="<p>Choose small towns or off-season adventures for unique cultural experiences. Local guides often unlock the best food, views, and stories.</p><p>Pack light, plan mindfully, and allow extra time for spontaneous discoveries.</p>">Read More</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card" data-cat="Health">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=1200&q=80" alt="Yoga practice">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Health</span>
+              <h3>Yoga for Everyday Calm</h3>
+              <p>Simple yoga sequences to reduce tension, improve posture, and invite ease into your day.</p>
+              <div class="card-actions">
+                <button class="read-btn" data-title="Yoga for Everyday Calm" data-img="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=1600&q=80" data-content="<p>Begin with breath-centered movement and gentle stretches focusing on shoulders, hips and spine. Regular short sessions build resilience and flexibility.</p><p>Combine breathwork and slow movement to quiet the nervous system and restore balance.</p>">Read More</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Post details">
+    <div class="modal-panel" role="document">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <img id="modalImg" class="modal-image" src="" alt="">
+      <h3 id="modalTitle"></h3>
+      <div id="modalContent" class="modal-text"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>© 2025 LifeVibe | All Rights Reserved</p>
+      <div class="socials" aria-label="Social links">
+        <a href="#" class="social" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#" class="social" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+        <a href="#" class="social" aria-label="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
